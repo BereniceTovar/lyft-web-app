@@ -52,33 +52,86 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <a href="#verify-phone" data-toggle="modal"><button id="btn-next" class="btn-send btn btn-light" type="submit" disabled>NEXT</button></a>
+                            <a href="#verify-phone" data-toggle="modal">
+                                <button id="btn-next" class="btn-send btn btn-light" type="submit" disabled>NEXT</button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--Modal Sign Up-->
+            <!--Modal Verify Phone-->
             <div class="modal fade" id="verify-phone">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header row">
-                                <h1>Titulo</h1>
-                                <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-row">
-                                        <h4>Form row</h4>
-                                        <p class="center">We'll send a text to verify your phone</p>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header row">
+                            <button tyle="button" class="close col-md-3 col-xs-3" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <i class="fas fa-chevron-left col-md-3 col-xs-3"></i>
+                            <h1 class="col-md-3 col-xs-3">Verify phone number</h1>
+                            <p class="col-md-3 col-xs-3">Join now for free ride credit</p>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">LAB-</label>
+                                    <div class="col-sm-10">
+                                        <input id="lab-code" type="text" class="form-control" placeholder="Code">
                                     </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button id="btn-next" class="btn-send btn btn-light" type="submit">NEXT</button>
-                            </div>
+                                </div>
+                            </form>
+                            <p>Enter the code send to your number.</p>
+                            <br>
+                            <button id="resend-code" type="button" class="btn btn-outline-secondary">Resend code</button>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#sign-up2" data-toggle="modal"><button id="btn-next2" class="btn-send btn btn-light" type="submit" disabled>NEXT</button></a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!--Modal Sign Up 2-->
+            <div class="modal fade" id="sign-up2">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header row">
+                            <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <i class="fas fa-chevron-left col-md-3 col-xs-3"></i>
+                            <h3 class="col-md-6 col-xs-6">Sign Up</h3>
+                            <p class="col-md-6 col-xs-6">Join now for free ride credit</p>
+                        </div>
+                        <div class="modal-body">
+                            <form id="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="validationCustom01">First name</label>
+                                        <input type="text" class="form-control val-form" id="validationCustom01" placeholder="First name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="validationCustom02">Last name</label>
+                                        <input type="text" class="form-control val-form" id="validationCustom02" placeholder="Last name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="validationCustom02">Email</label>
+                                        <input type="text" class="form-control val-form" id="validationCustom02" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                                <label class="form-check-label" for="gridCheck1">
+                                                    I agree to Lyft's <a href="#">Terms of service.</a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btn-next2" class="btn-send btn btn-light" type="submit" disabled>NEXT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -89,6 +142,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/assets/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
