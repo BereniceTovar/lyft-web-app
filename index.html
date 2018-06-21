@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lyft</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/assets/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="splash(1000)">
+    <div id="splashscreen">
+    </div>
+    <header class="second-image" >
+        <div class="container">
+            <div class="row">
+                <button type="button" class="btn btn-outline-light button-login">Log In</button>
+                <a href="#sign-up" data-toggle="modal"><button type="button" class="btn btn-outline-light button-signup">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    <!--Main section-->
+    <div class="container">
+        <section class="main row">
+            <!--Modal Sign Up-->
+            <div class="modal fade" id="sign-up">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header row">
+                            <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <i class="fas fa-chevron-left col-md-3 col-xs-3"></i>
+                            <h3 class="col-md-6 col-xs-6">Sign Up</h3>
+                            <p class="col-md-6 col-xs-6">Join now for free ride credit</p>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Country</button>
+                                            <div class="dropdown-menu">
+                                                <img id="mx" class="dropdown-item flag-style" src="assets/images/mexico.png" alt="mexico-flag">
+                                                <img id="col" class="dropdown-item flag-style" src="assets/images/colombia.png" alt="colombia-flag">
+                                                <img id="peru" class="dropdown-item flag-style" src="assets/images/peru.png" alt="peru-flag">
+                                                <img id="usa" class="dropdown-item flag-style" src="assets/images/usa.png" alt="usa-flag">
+                                            </div>
+                                        </div>
+                                        <input id="phone" type="tel" class="form-control" aria-label="Text input with dropdown button" value="Phone number">
+                                    </div>
+                                    <p class="center">We'll send a text to verify your phone</p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#verify-phone" data-toggle="modal"><button id="btn-next" class="btn-send btn btn-light" type="submit" disabled>NEXT</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modal Sign Up-->
+            <div class="modal fade" id="verify-phone">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header row">
+                                <h1>Titulo</h1>
+                                <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-row">
+                                        <h4>Form row</h4>
+                                        <p class="center">We'll send a text to verify your phone</p>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="btn-next" class="btn-send btn btn-light" type="submit">NEXT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/assets/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
