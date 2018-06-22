@@ -87,7 +87,7 @@ $('#btn-next3').click(function(){
     if(inputForm.length > 1 && inputForm != ' ' && $("#gridCheck1").is(':checked')){
         $('#sign-up2').hide();
         $('#third-image').css('display', 'block');
-        swal("Congratulations!!", "Your login has been successful :)", "success");
+        swal("Congratulations!!", "Your Sign Up has been successful :)", "success");
     }
 });
 
