@@ -9,30 +9,30 @@ function splash(param) {
 
 //Funciónes que muestra la clave de los países respectivos al hacer click en su bandera.
 $('#mx').click(function(){
-    $( "input[value$='Phone number']" ).val( '52' );
+    $( "input[value$='Choose your country']" ).val( '52' );
 });
 
 $('#col').click(function(){
-    $( "input[value$='Phone number']" ).val( '57' );
+    $( "input[value$='Choose your country']" ).val( '57' );
 });
 
 $('#peru').click(function(){
-    $( "input[value$='Phone number']" ).val( '51' );
+    $( "input[value$='Choose your country']" ).val( '51' );
 });
 
 $('#usa').click(function(){
-    $( "input[value$='Phone number']" ).val( '01' );
+    $( "input[value$='Choose your country']" ).val( '01' );
 });
 
 //Función que verifica el número de teléfono
 $("#phone").keyup(function(){
-    $("#btn-next").removeAttr("disabled");
     var phoneNumber = $("#phone").val();
-    
-    if(phoneNumber.length == 0 || phoneNumber == null || phoneNumber.length != 12 || phoneNumber != NaN ) {
-    $("#btn-next").attr("disabled");
+    var letters = /^[a-zA-Z]+$/;
+    if(phoneNumber.length === 12 && phoneNumber != letters && phoneNumber != NaN) {
+    $("#btn-next").removeAttr("disabled");
     }
 });
+
 
 //Función que lanza código generado aleatoriamente**
 $('#btn-next').click(function(){
@@ -66,23 +66,36 @@ $("#lab-code").keyup(function(){
 
 });
 
+//Funciones que regresan a menú anterior
+$('#first-icon').click(function(){
+$('#sign-up').hide();
+});
+
+$('#second-icon').click(function(){
+$('#sign-up').show();
+$('#verify-phone').hide();
+});
+
+$('#third-icon').click(function(){
+$('#verify-phone').show();
+$('#sign-up2').hide();
+});
+
 //Función que habilita el último form cuando todos los campos esten llenos
-var valueForm = $('.val-form').val();
-if(valueForm != '' ){
-    console.log('Hola :B');
-}
-/*
-if( $('.form-check-input').prop('checked') ) {
-    alert('Seleccionado');
-}*/
+$('#btn-next3').click(function(){
+    var inputForm = $(".val-form").val();
+    if(inputForm.length > 1 && inputForm != ' ' && $("#gridCheck1").is(':checked')){
+        $('#sign-up2').hide();
+        $('#third-image').css('display', 'block');
+        swal("Congratulations!!", "Your login has been successful :)", "success");
+    }
+});
 
 
 //Función click segundo form
 $('#btn-next2').click(function(){
     $('#verify-phone').hide();
 });
-
-
 
 $(document).ready(function(){
     
