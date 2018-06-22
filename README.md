@@ -25,7 +25,7 @@ En este ejercicio se desarrolla una web-app que replica el sitio de Lyft, se uti
 ![Lyft Mobile](assets/images/celular8.png)
 
 
-##Visualización desktop
+## Visualización desktop
 ![Lyft Desktop](assets/images/pantalla1.png)
 
 ![Lyft Desktop](assets/images/pantalla2.png)
